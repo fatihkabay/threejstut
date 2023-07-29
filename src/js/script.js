@@ -42,12 +42,12 @@ const grid = new THREE.GridHelper(30)
 scene.add(grid)
 
 const sphereGeometry = new THREE.SphereGeometry(4, 50, 50)
-const sphereMaterial = new THREE.MeshStandardMaterial({color: 0x0000FF, wireframe: false})
+const sphereMaterial = new THREE.MeshBasicMaterial({color: 0x0000FF, wireframe: false})
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
 
 scene.add(sphere)
 
-sphere.position.x = -10
+sphere.position.set(-10, 10, 0)
 
 function animate(time) {
    box.rotation.x = time / 1000
